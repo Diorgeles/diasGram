@@ -31,7 +31,7 @@ export default class New extends Component {
 
     socket.on('like', likedPost => {
     this.setState({
-      feed: this.state.feed.map(post => 
+      feed: this.state.feed.map(post =>
         post._id === likedPost._id ? likedPost : post)
     })
     })
@@ -45,7 +45,6 @@ export default class New extends Component {
     return (
       <section id='post-list'>
         {this.state.feed.map(post => (
-          console.log(post),
           <article>
             <header>
               <div className='user-info'>
