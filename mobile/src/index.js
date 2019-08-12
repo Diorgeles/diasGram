@@ -1,8 +1,13 @@
-import React from 'react';
+import React from "react";
+import { YellowBox } from "react-native";
 
-import '~/config/ReactotronConfig';
+YellowBox.ignoreWarnings([
+  'Unrecognized WebSocket'
+])
 
-import Routes from '~/routes';
+import "~/config/ReactotronConfig";
+
+import Routes from "~/routes";
 
 const App = () => <Routes />;
 
